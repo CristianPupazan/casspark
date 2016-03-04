@@ -1,0 +1,12 @@
+.gradle/
+.idea/
+**/*.ipr
+**/*.iws
+**/*.iml
+target/
+**/gradlew.bat
+*~
+*.retry
+**/*.pyc
+**/*.swp
+**/.DS_Store

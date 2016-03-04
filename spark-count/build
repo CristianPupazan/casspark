@@ -1,0 +1,3 @@
+#!/bin/bash
+
+../gradlew --build-file ../build.gradle clean spark-count:build

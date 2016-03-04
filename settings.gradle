@@ -1,0 +1,3 @@
+include ":spark-count"
+project(":spark-count").projectDir = new File(settingsDir, "spark-count")
+
