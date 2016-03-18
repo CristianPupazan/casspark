@@ -6,7 +6,7 @@ import org.cristianpupazan.example.count.SimpleSparkCount
 object SimpleSparkCountApp extends App {
 
   val conf = new SparkConf(true)
-    .setMaster("spark://localhost:7077")
+    .setMaster("spark://master.docker.ip:7077")
     .setAppName("SimpleSparkCount")
   val sc = new SparkContext(conf)
 

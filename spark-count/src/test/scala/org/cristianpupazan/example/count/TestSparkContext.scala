@@ -8,7 +8,7 @@ trait TestSparkContext extends BeforeAndAfterAll {
   this: Suite =>
 
   val conf = new SparkConf(true)
-  .setMaster("spark://localhost:7077")
+  .setMaster("spark://master.docker.ip:7077")
   //  .setMaster("local[1]")
   .setAppName("test")
   val sc = new SparkContext(conf)

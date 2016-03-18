@@ -1,6 +1,8 @@
 # spark-count
 Simple spark count example
 
+Ensure you have installed prerequisites (see [README] (../README.md))
+
 Start spark master and worker:
 
     ./start-docker-spark.sh
@@ -14,6 +16,10 @@ Spark UI:
 Build:
 
     ./build
+    
+Build in docker:
+
+    ./build_in_docker
 
 Docker logs:
 

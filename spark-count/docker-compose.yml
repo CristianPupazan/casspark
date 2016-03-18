@@ -1,3 +1,12 @@
+ubuntu:
+  build: .
+  volumes:
+   - ..:/home/dev/code
+   - $HOME/.ivy2:/home/dev/.ivy2
+   - $HOME/.gradle:/home/dev/.gradle
+  links:
+   - master:master.docker.ip
+
 master:
   image: cristianpupazan1/docker-spark
   tty: true
