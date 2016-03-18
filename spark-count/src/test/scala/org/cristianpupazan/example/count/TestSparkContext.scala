@@ -1,13 +1,17 @@
 package org.cristianpupazan.example.count
 
-import org.apache.spark.SparkContext
+import org.apache.spark.{SparkConf, SparkContext}
 import org.scalatest.{BeforeAndAfterAll, Suite}
 
 
 trait TestSparkContext extends BeforeAndAfterAll {
   this: Suite =>
 
-  val sc = new SparkContext("spark://localspark:7077", "test")
+  val conf = new SparkConf(true)
+  .setMaster("spark://localhost:7077")
+  //  .setMaster("local[1]")
+  .setAppName("test")
+  val sc = new SparkContext(conf)
 
   override def afterAll() = sc.stop()
 }

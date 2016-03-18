@@ -1,13 +1,16 @@
 package org.cristianpupazan.example
 
-import org.apache.spark.SparkContext
+import org.apache.spark.{SparkConf, SparkContext}
 import org.cristianpupazan.example.count.SimpleSparkCount
 
 object SimpleSparkCountApp extends App {
 
-  val sc = new SparkContext("spark://127.0.0.1:7077", "SimpleSparkCount")
+  val conf = new SparkConf(true)
+    .setMaster("spark://localhost:7077")
+    .setAppName("SimpleSparkCount")
+  val sc = new SparkContext(conf)
 
-  new SimpleSparkCount(sc).count("foo")
+  new SimpleSparkCount(sc).count(1 to 10)
 }
 
 

@@ -4,6 +4,5 @@ import org.apache.spark.SparkContext
 
 class SimpleSparkCount(sc: SparkContext) {
 
-  def count(word: String): Long = sc.makeRDD(word.toCharArray.toSeq).count()
-
+  def count(numbers: Seq[Int]): Long = sc.parallelize(numbers).count()
 }
